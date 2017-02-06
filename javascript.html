@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<title>javascript方法验证</title>
+		<script type='text/javascript' src='js/jquery-3.1.1.js'></script>
+		<style type='text/css'>
+			p span{
+				color:red
+			}
+			.lilf{
+				color:red
+			}
+			.lilo{
+				color:blue
+			}
+			
+			.listitem_1, .listitem_3
+			{
+			color:red;
+			}
+			.listitem_0, .listitem_2
+			{
+			color:blue;
+			}
+			#new-feed{
+			position:relative;
+			height:20px;
+			width:100px;
+			overflow:hidden;
+			}
+			.headline{
+			position:absolute;
+			height:200px;
+			top:1500px;
+			overflow:hidden;
+			}
+		</style>
+		<script type='text/javascript'>
+			$().ready(function(){
+				var person={};
+				var date=new Date();
+				var regexpString='who 123';
+				var pattern=/\s/g;
+				//alert(pattern.test(regexpString));
+				document.write(regexpString.replace(/who/g, "123"));
+				//alert((pattern.exec(regexpString)).toString());
+				//javascript 方法验证
+				//var person={};
+				//setObjectName(person);
+				//alert(person.name);
+				//检查类型 typeof
+				//var li;
+				//alert(typeof li);
+				//alert(person instanceof Object);//检验是什么类型的对象
+				
+			});
+			//验证Javascript的值传递方式是按值传递，而不是按引用传递
+			function setObjectName(person){
+				person.name="li";
+				person={};
+				person.name='lilongfeng';
+			}
+		</script>
+	</head>
+	<body>
+		<h3>测试滚动</h3>
+		<div id='new-feed'>
+			<a class='headline'>很好啊啊啊啊啊啊</a>
+		</div>
+		<p>测试<span>jQuery</span></p>
+		<table id="testTable">
+			<thead>
+				<tr>
+					<td>姓名</td>
+					<td>年龄</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>lilf01</td>
+					<td>28</td>
+				</tr>
+				<tr>
+					<td>lilf02</td>
+					<td>28</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>tfoot01</td>
+					<td>29</td>
+				</tr>
+				<tr>
+					<td>tfoot02</td>
+					<td>29555555555555555555555555555555555555555555555555555555555555</td>
+				</tr>
+			</tfoot>
+		</table>
+		
+		<h1 id="h1">This is a heading</h1>
+		<ul>
+		<li>Apple</li>
+		<li>IBM</li>
+		<li>Microsoft</li>
+		<li>Google</li>
+		</ul>
+		<button class="btn1">添加或移除列表项的类</button>
+		<div id='testAjax'></div>
+		 <div id="selectInit" > 
+			<label>周：</label>
+		</div> 
+	</body>
+</html>
